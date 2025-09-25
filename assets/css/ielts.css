@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&display=swap');
+  body {  
+    color:#3b3c3d;
+    font-family:'Poppins',sans-serif;
+    font-size:16px;
+  }  
+* { 
+    border: 0 solid #e8e8e8; 
+    box-sizing: border-box;
+} 
+
+body { 
+    text-rendering: optimizeSpeed; 
+    margin: 0; 
+    min-height: 100vh; 
+    padding: 0;
+} 
+
+body { 
+    color: #333; 
+    display: flex; 
+    flex-direction: column; 
+    font-family: 'Poppins',sans-serif; 
+    font-size: 16px; 
+    position: relative;
+} 
+
+.header-wrapper  { 
+    background-size: cover; 
+    /* margin-top: 20px; */
+    background: rgb(137,34,154);
+    background: linear-gradient(90deg, rgba(137,34,154,1) 0%, rgba(166,32,163,1) 35%, rgba(100,19,162,1) 100%);
+} 
+
+*,:after,:before { 
+    border: 0 solid #e8e8e8; 
+    box-sizing: border-box;
+} 
+
+.container { 
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 1368px; 
+    width: 100%;
+} 
+
+@media (max-width: 1599px){ 
+  .container { 
+    max-width: calc(100vw - 270px);
+  } 
+}     
+
+.header-container  { 
+    align-items: center; 
+    display: flex; 
+    flex-wrap: nowrap;
+} 
+
+.header-container .top-header  { 
+    flex: 1 1 45%; 
+    margin: 60px 32px 60px 0;
+} 
+
+@media (max-width: 1599px){ 
+  .header-container .top-header  { 
+    flex: 1 1 50%;
+  } 
+}     
+
+.header-container .header-image-wrapper  { 
+    flex: 1 1 55%; 
+    line-height: 0; 
+    text-align: center;
+} 
+
+@media (max-width: 1599px){ 
+  .header-container .header-image-wrapper  { 
+    flex: 1 1 50%;
+  } 
+}     
+
+h1 { 
+    color: #004485; 
+    font-family: Sumana,serif; 
+    font-size: 48px; 
+    font-weight: 400; 
+    line-height: 1.13; 
+    margin: 20px 0 30px;
+} 
+
+.header-container .top-header h1  { 
+    color: #fff; 
+    font-weight: 500; 
+    margin: 0 0 16px;
+} 
+
+p { 
+    font-size: 16px; 
+    line-height: 1.78; 
+    margin-bottom: 18px; 
+    margin-top: 0;
+} 
+
+.header-wrapper .header-container .top-header > p  { 
+    color: #fff; 
+    font-size: 18px; 
+    font-weight: 400; 
+    line-height: normal;
+} 
+
+.header-container .top-header .sub-header  { 
+    margin-bottom: 32px;
+} 
+
+.header-container .top-header .header-phrase  { 
+    color: #fff; 
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    line-height: normal;
+} 
+
+.header-container .top-header .header-link-wrapper  { 
+    align-items: flex-end; 
+    display: flex; 
+    flex-wrap: wrap;
+} 
+
+.header-container .top-header .header-mobile-image-wrapper  { 
+    display: none; 
+    line-height: 0; 
+    margin: 30px 0 0; 
+    text-align: center;
+} 
+
+.header-container .header-image-wrapper img  { 
+    height: auto; 
+    max-height: 100%; 
+    max-width: 100%;
+} 
+
+.header-container .top-header .header-phrase p  { 
+    color: #fff; 
+    font-size: 18px;  
+    font-family: 'Poppins', sans-serif;
+    line-height: normal; 
+    margin-bottom: 18px;
+} 
+
+.header-container .top-header .header-phrase p:last-child  { 
+    margin-bottom: 0!important;
+} 
+
+a { 
+    -webkit-text-decoration-skip: ink; 
+    text-decoration-skip-ink: auto;
+} 
+
+a { 
+    color: inherit; 
+    text-decoration: none;
+} 
+
+.header-container .top-header .header-link-1  { 
+    background-color: #ffd546; 
+    color: #222; 
+    display: inline-block; 
+    font-size: 18px; 
+    font-weight: 600; 
+    line-height: 1.78; 
+    margin-right: 32px; 
+    padding: 9px 66px 9px 32px; 
+    position: relative;
+  } 
+@media (max-width: 1919px){ 
+  .header-container .top-header .header-link-1  { 
+    margin-right: 24px; 
+    padding: 9px 54px 9px 24px;
+  } 
+}     
+
+.header-wrapper .header-container .top-header .header-link-wrapper > :first-child  { 
+    margin-top: 60px!important;
+} 
+
+.header-container .top-header .header-link-1.no-arrow  { 
+    padding-right: 32px;
+} 
+
+@media (max-width: 1919px){ 
+  .header-container .top-header .header-link-1.no-arrow  { 
+    padding-right: 24px;
+  } 
+}     
+
+.header-wrapper .header-container .top-header .header-link-1::after { 
+    content: "\e926"; 
+    display: block; 
+    font-family: 'Poppins'; 
+    font-size: 14px; 
+    font-weight: 400; 
+    line-height: normal; 
+    position: absolute; 
+    right: 32px; 
+    top: 19px;
+} 
+
+@media (max-width: 1919px){ 
+  .header-wrapper .header-container .top-header .header-link-1::after { 
+    right: 18px;
+  } 
+}     
+
+.header-wrapper .header-container .top-header .header-link-1.no-arrow::after { 
+    display: none;
+} 
+
+.redesign .icp .header-wrapper .header-container .top-header .header-link-1:hover::after { 
+    animation: slide-left 1s ease-in-out infinite;
+    
+}  
+
+.header-container .top-header .header-mobile-image-wrapper img  { 
+    height: auto; 
+    max-height: 430px; 
+    max-width: 700px;
+} 
+

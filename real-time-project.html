@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Real-Time Project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/node_modules/aos/dist/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/real-time-project.css" rel="stylesheet">
+  <link href="assets/css/web-dev.css" rel="stylesheet">
+
+  <!-- Custom CSS for Projects Section -->
+  <style>
+    :root {
+      --card-bg: #ffffff;
+      --muted: #6b7280;
+      --accent: #6366f1;
+      --accent-2: #06b6d4;
+      --glass: rgba(255, 255, 255, 0.6);
+    }
+
+    .projects-section {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      padding: 5rem 0;
+    }
+
+    .projects-section .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .projects-section h2 {
+      font-size: 2.5rem;
+      color: #343a40;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .projects-section p.section-desc {
+      color: #6c757d;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* Media / Banner Card */
+    .projects-section .card-media {
+      overflow: hidden;
+      border-radius: 12px;
+      padding: 0;
+      position: relative;
+      background: var(--card-bg);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      border: 1px solid rgba(15, 23, 42, 0.04);
+    }
+
+    .projects-section .card-media:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .projects-section .media-top {
+      height: 150px;
+      background: #8b26b0;
+      /* Solid background color */
+      display: flex;
+      align-items: flex-end;
+      padding: 14px;
+      color: white;
+      position: relative;
+    }
+
+    .projects-section .media-top::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      /* Dark overlay for text readability */
+      z-index: 1;
+    }
+
+    .projects-section .media-top>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .projects-section .media-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .projects-section .media-title:hover {
+      color: #8b26b0;
+      /* Hover color */
+    }
+
+    .projects-section .media-body {
+      padding: 14px;
+      background: var(--card-bg);
+    }
+
+    .projects-section .status {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #047857;
+      /* Green for Live */
+      margin-bottom: 12px;
+    }
+
+    .projects-section .status.ongoing {
+      color: #d97706;
+      /* Amber for On Going */
+    }
+
+    .projects-section .btn {
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .projects-section .btn.primary {
+      background: #8b26b0;
+      /* Button color */
+      color: white;
+      box-shadow: 0 6px 18px rgba(139, 38, 176, 0.12);
+    }
+
+    .projects-section .btn.primary:hover {
+      transform: scale(1.05);
+      /* Slight scale-up on hover */
+      background: #6e1e8c;
+      /* Darker shade of #8b26b0 */
+      box-shadow: 0 8px 24px rgba(139, 38, 176, 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 420px) {
+      .projects-section .grid {
+        grid-template-columns: 1fr;
+        margin: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a
+            href="mailto:contact@example.com">ssinfotech1631@gmail.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>9850942048, 7719927774</span></i>
+      </div>
+      <div class="cta d-none d-md-flex align-items-center">
+        <a href="#about" class="scrollto">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <h1><a href="index.html"><img src="logo.png" alt height="250px"></a></h1>
+      </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="about.html">About Us</a></li>
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="real-time-project.html">Real Time Project Development</a></li>
+              <li class="dropdown"><a href="#"><span>Jobs & Career Consultant</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="job.html">Jobs</a></li>
+                  <li><a href="career.html">Career</a></li>
+                </ul>
+              </li>
+              <li><a href="softwaredev.html">Software Development</a></li>
+              <li><a href="web-dev.html">Web & App Development</a></li>
+              <li><a href="DM.html">Digital Marketing</a></li>
+              <li><a href="ielts.html">ILETS/GRE/TOFEL Training</a></li>
+              <li><a href="campus.html">Campus Hiring Program</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="training.html">Training Programs</a></li>
+          <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="Contact-Us.html">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Hero Section Start -->
+  <div class="header-wrapper">
+    <div class="container header-container" data-aos="fade-up" data-aos-delay="100">
+      <div class="top-header">
+        <h1>Real Time Project</h1>
+        <p class="sub-header">
+          Project Pulse: Where Ideas Meet Reality in Real-Time
+        </p>
+        <div class="header-phrase">
+          <p>
+            Boost your business with modern solutions! We are your trusted IT partners, specializing in delivering small
+            and attractive real-time projects that seamlessly integrate innovation into your operation. Get elevated in
+            your technology landscape with our expertise and stay ahead in the dynamic digital era.
+          </p>
+        </div>
+        <div class="header-link-wrapper">
+          <a href="#tabs" rel="nofollow" target="_self" class="btn btn-outline py-3 px-5 text-white"
+            data-track-element="header link">
+            Get Started
+          </a>
+        </div>
+      </div>
+      <div class="header-image-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <img width="617" height="401" src="assets/img/webdev_img/hero-img.png" title="Web Development Services"
+          alt="Web Development Services" />
+      </div>
+    </div>
+  </div>
+  <!-- Hero Section End -->
+
+  <!-- Info Section Start -->
+  <div class="container-xxl py-5">
+    <div class="container mb-4 mt-5" data-aos="fade-up" data-aos-delay="200">
+      <div class="row g-5 align-items-center justify-content-center">
+        <p class="text-center px-5 text-muted">
+          SS Infotech is aiding enterprises through this journey from resilience to relevance with solutions powered by
+          next-gen tech. As a large team of experts in IT, we help solve your business problems with our IT expertise
+          and give IT solutions.
+          Your reliable IT partners for cutting-edge real-time projects that blend innovation with smooth and
+          cost-effective operations. Elevate your technology landscape to the next level with our expertise and stay
+          ahead in this fast-paced digital environment.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Info Section End -->
+
+  <main id="main">
+    <!-- ======= Tabs Section ======= -->
+    <section id="tabs" class="tabs pb-5 pt-5">
+      <div class="container" data-aos="fade-up">
+        <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-4">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class="ri-gps-line"></i>
+              <h4 class="d-none d-lg-block">Aroma Girls Hostel</h4>
+            </a>
+          </li>
+          <li class="nav-item col-4">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class="ri-body-scan-line"></i>
+              <h4 class="d-none d-lg-block">SS Overseas</h4>
+            </a>
+          </li>
+          <li class="nav-item col-4">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <i class="ri-sun-line"></i>
+              <h4 class="d-none d-lg-block">AliGn Infotech</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <h2>Welcome to Aroma Girls Hostel: Where Safety, Comfort, and Community Thrive</h2>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Secure and cozy living experience exclusively for females.
+                  </li>
+                  <li><i class="ri-check-double-line"></i> Comprehensive online portal showcasing facilities, room
+                    options, and precautionary features.</li>
+                  <li><i class="ri-check-double-line"></i> Focus on creating a home away from home for students and
+                    professionals.</li>
+                  <li><i class="ri-check-double-line"></i> Emphasis on safety measures amidst the COVID-19 pandemic.
+                  </li>
+                </ul>
+                <p>
+                  The Aroma Girls Hostel offers a safe and modern living place with facilities that target young female
+                  professionals or students seeking a safe and comfortable haven. A comprehensive online portal gives
+                  insight into facilities and precautionary measures The place is suitable, home-like and accessible
+                  online with speedy internet and dedicated housekeeping.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/webdev_img/aroma.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h2>SS Overseas Education: Your Gateway to Global Academic Opportunities</h2>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Wide range of courses, universities, and destinations
+                    tailored to individual academic ambitions.</li>
+                  <li><i class="ri-check-double-line"></i> Comprehensive guidance for international education journeys.
+                  </li>
+                  <li><i class="ri-check-double-line"></i> Dedication to making overseas education dreams a reality by
+                    covering application formalities, admission processes, scholarships, and visa procedures.</li>
+                  <li><i class="ri-check-double-line"></i> Focus on shaping students' futures through global education
+                    and ensuring they fly towards their dreams securely.</li>
+                </ul>
+                <p>
+                  SS Overseas Education is your direct access to global academic success, along with personalized
+                  guidance and all the coverage required throughout the international education process. With meticulous
+                  attention to detail and unwavering support, they turn your dreams into reality.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/webdev_img/overseas.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h2>AliGn Infotech: Strategic Security and Quality Focus</h2>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Emphasis on security and privacy in online marketing efforts.
+                  </li>
+                  <li><i class="ri-check-double-line"></i> Specific tasks assigned to individual teams, each led by a
+                    dedicated leader to oversee operations.</li>
+                  <li><i class="ri-check-double-line"></i> Focus on quality by ensuring the selection of engineers who
+                    align with the company's values and objectives.</li>
+                  <li><i class="ri-check-double-line"></i> Teams are structured to handle specific aspects of online
+                    marketing, ensuring efficiency and focus in executing tasks.</li>
+                </ul>
+                <p>
+                  We both prioritize online marketing efforts' security and privacy by assigning specific tasks to each
+                  team under a dedicated leader who oversees operations. Our quality emphasis is such that we get the
+                  right engineers who will be able to fit into the company.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/webdev_img/align.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Tabs Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <section id="projects" class="projects-section py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center">Our Portfolio</h2>
+        <p class="text-center section-desc">Discover our comprehensive collection of real-time projects, seamlessly
+          integrating cutting-edge innovation across diverse industries to deliver impactful and high-quality solutions.
+        </p>
+        <div class="grid">
+          <!-- Clothing Module -->
+          <div class="card-media card" aria-label="Clothing project card" data-aos="fade-up" data-aos-delay="100">
+            <div class="media-top">
+              <div>
+                <div class="media-title">Clothing</div>
+                <div style="opacity:.9; font-size:0.88rem">E-commerce Platform</div>
+              </div>
+            </div>
+            <div class="media-body">
+              <div class="status">Live</div>
+              <div style="color:var(--muted); font-size:0.95rem; margin-bottom:12px;">
+                E-commerce platform for fashion retail with seamless user experience.
+              </div>
+              <div class="badges" style="margin-bottom:12px;">
+                <div class="badge">React</div>
+                <div class="badge">Node.js</div>
+                <div class="badge">MongoDB</div>
+              </div>
+              <div style="display:flex; justify-content:flex-end;">
+                <button class="btn primary">Check</button>
+              </div>
+            </div>
+          </div>
+          <!-- Overseas Module -->
+          <div class="card-media card" aria-label="Overseas project card" data-aos="fade-up" data-aos-delay="200">
+            <div class="media-top">
+              <div>
+                <div class="media-title">Overseas</div>
+                <div style="opacity:.9; font-size:0.88rem">Travel & Logistics</div>
+              </div>
+            </div>
+            <div class="media-body">
+              <div class="status">Live</div>
+              <div style="color:var(--muted); font-size:0.95rem; margin-bottom:12px;">
+                Travel booking and international logistics management system.
+              </div>
+              <div class="badges" style="margin-bottom:12px;">
+                <div class="badge">Vue</div>
+                <div class="badge">Python</div>
+                <div class="badge">Postgres</div>
+              </div>
+              <div style="display:flex; justify-content:flex-end;">
+                <button class="btn primary">Check</button>
+              </div>
+            </div>
+          </div>
+          <!-- Denspa Module -->
+          <div class="card-media card" aria-label="Denspa project card" data-aos="fade-up" data-aos-delay="300">
+            <div class="media-top">
+              <div>
+                <div class="media-title">Denspa</div>
+                <div style="opacity:.9; font-size:0.88rem">Dental Clinic</div>
+              </div>
+            </div>
+            <div class="media-body">
+              <div class="status">Live</div>
+              <div style="color:var(--muted); font-size:0.95rem; margin-bottom:12px;">
+                Dentist clinic website showcasing treatment photos and available dental services.
+              </div>
+              <div class="badges" style="margin-bottom:12px;">
+                <div class="badge">Angular</div>
+                <div class="badge">Node.js</div>
+                <div class="badge">MongoDB</div>
+              </div>
+              <div style="display:flex; justify-content:flex-end;">
+                <button class="btn primary">Check</button>
+              </div>
+            </div>
+          </div>
+          <!-- Tomato Module -->
+          <div class="card-media card" aria-label="Tomato project card" data-aos="fade-up" data-aos-delay="400">
+            <div class="media-top">
+              <div>
+                <div class="media-title">Tomato</div>
+                <div style="opacity:.9; font-size:0.88rem">Food Delivery</div>
+              </div>
+            </div>
+            <div class="media-body">
+              <div class="status ongoing">On Going</div>
+              <div style="color:var(--muted); font-size:0.95rem; margin-bottom:12px;">
+                Food delivery website for seamless ordering and delivery of meals.
+              </div>
+              <div class="badges" style="margin-bottom:12px;">
+                <div class="badge">React</div>
+                <div class="badge">Express</div>
+                <div class="badge">Postgres</div>
+              </div>
+              <div style="display:flex; justify-content:flex-end;">
+                <button class="btn primary">Check</button>
+              </div>
+            </div>
+          </div>
+          <!-- LMS Module -->
+          <div class="card-media card" aria-label="LMS project card" data-aos="fade-up" data-aos-delay="500">
+            <div class="media-top">
+              <div>
+                <div class="media-title">LMS</div>
+                <div style="opacity:.9; font-size:0.88rem">Learning Management</div>
+              </div>
+            </div>
+            <div class="media-body">
+              <div class="status ongoing">On Going</div>
+              <div style="color:var(--muted); font-size:0.95rem; margin-bottom:12px;">
+                Learning Management System for streamlined education delivery.
+              </div>
+              <div class="badges" style="margin-bottom:12px;">
+                <div class="badge">Vue</div>
+                <div class="badge">Django</div>
+                <div class="badge">MySQL</div>
+              </div>
+              <div style="display:flex; justify-content:flex-end;">
+                <button class="btn primary">Check</button>
+              </div>
+            </div>
+          </div>
+          <!-- OK Module -->
+          <div class="card-media card" aria-label="OK project card" data-aos="fade-up" data-aos-delay="600">
+            <div class="media-top">
+              <div>
+                <div class="media-title">OK</div>
+                <div style="opacity:.9; font-size:0.88rem">E-commerce Platform</div>
+              </div>
+            </div>
+            <div class="media-body">
+              <div class="status ongoing">On Going</div>
+              <div style="color:var(--muted); font-size:0.95rem; margin-bottom:12px;">
+                E-commerce platform selling men's clothes, footwear, women's dresses, kids' products, and home goods.
+              </div>
+              <div class="badges" style="margin-bottom:12px;">
+                <div class="badge">React</div>
+                <div class="badge">Node.js</div>
+                <div class="badge">MongoDB</div>
+              </div>
+              <div style="display:flex; justify-content:flex-end;">
+                <button class="btn primary">Check</button>
+              </div>
+            </div>
+          </div>
+          <!-- Ayurveda Module -->
+          <div class="card-media card" aria-label="Ayurveda project card" data-aos="fade-up" data-aos-delay="700">
+            <div class="media-top">
+              <div>
+                <div class="media-title">Ayurveda</div>
+                <div style="opacity:.9; font-size:0.88rem">E-commerce Platform</div>
+              </div>
+            </div>
+            <div class="media-body">
+              <div class="status">Live</div>
+              <div style="color:var(--muted); font-size:0.95rem; margin-bottom:12px;">
+                E-commerce website for selling authentic Ayurveda products.
+              </div>
+              <div class="badges" style="margin-bottom:12px;">
+                <div class="badge">Angular</div>
+                <div class="badge">Express</div>
+                <div class="badge">MongoDB</div>
+              </div>
+              <div style="display:flex; justify-content:flex-end;">
+                <button class="btn primary">Check</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Projects Section -->
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3><img src="logo.png" alt height="140px"></h3>
+            <p style="text-align: center;">
+              Plot No.26, Khandwekar Bunglow<br>
+              2nd Floor, Near Lendra Park<br>
+              Ramdaspeth, Nagpur-440010<br><br>
+              <strong>Phone:</strong> 9399345989, 8446691425<br>
+              <strong>Email:</strong> ssinfotech1631@gmail.com<br>
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gallery.html">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="training.html">Training Program</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Contact-Us.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="real-time-project.html">Real Time Project Development</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i> <a href="softwaredev.html">Software Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="web-dev.html">Web & App Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="DM.html">Digital Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="ielts.html">ILETS/GRE/TOFEL Training</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="campus.html">Campus Hiring Program</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="job.html">Jobs & Career Consultant</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Google Map</h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3721.4021257563454!2d79.06715147525952!3d21.136389380539963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDA4JzExLjAiTiA3OcKwMDQnMTEuMCJF!5e0!3m2!1sen!2sin!4v1706957237808!5m2!1sen!2sin"
+              width="400" height="280" style="border:0;" allowfullscreen loading="fast"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container d-lg-flex py-4">
+      <div class="me-lg-auto text-center text-lg-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>SS Infotech</span></strong>. All Rights Reserved Designed by SS Infotech
+        </div>
+      </div>
+      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
